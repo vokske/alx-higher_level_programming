@@ -1,10 +1,7 @@
 #!/bin/bash
-import os
-import py_compile
-import sys
 
-pyfile = os.environ.get("PYFILE")
-py_compile.compile(pyfile, doraise = True)
-output_filename = f"{pyfile}c"
-sys.stderr.write(f"Compiled {pyfile} to {output_filename}\n")
-sys.exit(1)
+pyfile = "$PYFILE"
+python -m py_compile "$pyfile"
+output_filename = "${pyfile}c"
+echo "Compiled $pyfile to $output_filename" >&2
+exit 1
