@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+import os
+import py_compile
+import sys
+
+pyfile = os.environ.get("PYFILE")
+py_compile.compile(pyfile, doraise = True)
+output_filename = f"{pyfile}c"
+sys.stderr.write(f"Compiled {pyfile} to {output_filename}\n")
+sys.exit(1)
