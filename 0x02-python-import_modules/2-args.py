@@ -13,4 +13,3 @@ if __name__ == "__main__":
         print("{} arguments:".format(counter))
     for i in range(counter):
         print("{}: {}".format(i + 1, args[i]))
-
