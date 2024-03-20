@@ -6,4 +6,4 @@ if __name__ == '__main__':
     sum_args = 0
     for i in range(len(args)):
         sum_args += int(args[i])
-    print(sum_args)
+    print("{}".format(sum_args))
