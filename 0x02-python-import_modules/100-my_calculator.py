@@ -17,7 +17,7 @@ if __name__ == "__main__":
             sys.exit(1)
 
         valid_operator = {'+', '-', '*', '/'}
-        
+
         if operator not in valid_operator:
             print("Unknown operator. Available operators: +, -, * and /")
             sys.exit(1)
@@ -33,5 +33,5 @@ if __name__ == "__main__":
             result = mul(a, b)
         elif operator == '/':
             result = div(a, b)
-    
+
         print(f"{a} {operator} {b} = {result}")
