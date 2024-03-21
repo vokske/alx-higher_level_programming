@@ -5,7 +5,8 @@ from calculator_1 import add, sub, mul, div
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
-        sys.exit()
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
+        sys.exit(1)
     else:
         try:
             a = int(sys.argv[1])
@@ -16,10 +17,6 @@ if __name__ == "__main__":
             sys.exit(1)
 
         valid_operator = {'+', '-', '*', '/'}
-       
-        if len(sys.argv) != 4:
-            print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-            sys.exit(1)
         
         if operator not in valid_operator:
             print("Unknown operator. Available operators: +, -, * and /")
