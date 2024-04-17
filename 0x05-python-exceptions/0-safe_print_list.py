@@ -1,12 +1,12 @@
 #!/usr/bin/python3
 
 def safe_print_list(my_list=[], x=0):
-    i = 0
+    count = 0
     try:
-        while i < x:
-            print(my_list[i], end="")
-            i += 1
+        for element in range(x):
+            print(element, end="")
+            count += 1
     except IndexError:
-        print("That number exceeds the number of list elements")
+        break
     print()
-    return i
+    return count
