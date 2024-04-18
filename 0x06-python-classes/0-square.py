@@ -2,10 +2,11 @@
 """
     Defines a square
 """
+
+
 class Square:
     """
     Empty class representing a square
-    
     Attributes:
         (None)
 
@@ -16,4 +17,3 @@ class Square:
         Create an instance of the class Square to represent a square
     """
     pass
-
