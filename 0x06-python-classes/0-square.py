@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+    Defines a square
+"""
 class Square:
     """
     Empty class representing a square
@@ -10,7 +13,7 @@ class Square:
         (None)
 
     Usage:
-        Create an instance of the class Squareto represent a square
+        Create an instance of the class Square to represent a square
     """
     pass
 
