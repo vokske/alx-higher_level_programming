@@ -4,6 +4,7 @@
     Defines square by size.
 """
 
+
 class Square:
     """
     Represents a square.
