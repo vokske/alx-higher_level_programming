@@ -1,7 +1,9 @@
 #!/usr/bin/python3
 
 """
-Module represents a square.
+Module that defines a square.
+
+Author: Kevin Muigai
 """
 
 
@@ -13,7 +15,7 @@ class Square:
         Size(int): The length of each side of the square.
 
     Methods:
-        (None)
+        __init__(self, size=0): Initializes a square instance.
 
     Usage:
         Create an instance of the Square class.
