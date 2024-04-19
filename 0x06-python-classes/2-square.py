@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Represents a square.
+Module represents a square.
 """
 
 
@@ -25,6 +25,9 @@ class Square:
 
         Args:
             size(int): The lenght of the side of the square
+        Raises:
+            TypeError: if size is not an integer
+            ValueError: if size is less than 0
         """
 
     @property
