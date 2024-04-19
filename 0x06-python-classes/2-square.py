@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 
 """
-Represents a square
+Represents a square.
 """
+
 
 class Square:
     """
@@ -20,7 +21,10 @@ class Square:
 
     def __init__(self, size=0)
         """
-        Initializes a Square instance with the provided size
+        Initializes a Square instance with the provided size.
+
+        Args:
+            size(int): The lenght of the side of the square
         """
 
     @property
