@@ -1,15 +1,11 @@
 #!/usr/bin/python3
 
-"""
-Module that defines a square.
-
-Author: Kevin Muigai
-"""
+"""Module that defines a square."""
 
 
 class Square:
     """
-    Defines a square
+    Defines a square.
     
     Attributes:
         Size(int): The length of each side of the square.
