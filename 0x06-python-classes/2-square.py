@@ -1,15 +1,6 @@
 #!/usr/bin/python3
 
-"""
-Module that defines a square.
-
-Classes:
-    (None)
-Exceptions:
-    (None)
-Functions:
-    (None)
-"""
+"""Module that defines a square."""
 
 
 class Square:
