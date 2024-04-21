@@ -5,24 +5,36 @@ Module contains class rectangle.
 
 
 class Rectangle:
-    """Represents a rectangle."""
+    """
+    Represents a rectangle.
+
+    Attributes:
+        width (int): Width of the rectangle.
+        height (int): Height of the rectangle.
+    """
+
 
     def __init__(self, width=0, height=0):
         """Instantiates width.
 
         Args:
-            width (int): The width of the rectangle.
-            height (int): The height of the rectangle.
+            width (int, optional): The width of the rectangle.
+            height (int, optional): The height of the rectangle.
         """
         self.width = width
         self.height = height
 
     @property
     def width(self):
-        """Retrieves the width of the rectangle."""
+        """
+        Retrieves the width of the rectangle.
+
+        Returns:
+            int: Width of the rectangle
+        """
         return self.__width
 
-    @size.setter
+    @width.setter
     def width(self, value):
         """Sets the width."""
         if not isinstance(value, int):
@@ -36,7 +48,7 @@ class Rectangle:
         """Retrieves the height of the rectangle."""
         return self.__height
 
-    @size.setter
+    @height.setter
     def height(self, value):
         """Sets the height."""
         if not isinstance(value, int):
