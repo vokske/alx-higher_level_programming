@@ -27,6 +27,12 @@ class Rectangle:
            Returns:
                 str: The string representation of the rectangle.
 
+        __repr__(self):
+            Returns a string representation of the rectangle for eval().
+
+            Returns:
+                str: String representation of the rectangle.
+
        area(self):
            Calculates and returns the area of the rectangle.
 
