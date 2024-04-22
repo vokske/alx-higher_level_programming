@@ -14,7 +14,7 @@ class Rectangle:
     """
 
     def __init__(self, width=0, height=0):
-        """Instantiates width.
+        """Initializes an instance of the class Rectangle.
 
         Args:
             width (int, optional): The width of the rectangle.
@@ -35,7 +35,16 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
-        """Sets the width."""
+        """
+        Sets the width.
+
+        Args:
+            value (int): The width value.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -44,12 +53,26 @@ class Rectangle:
 
      @property
     def height(self):
-        """Retrieves the height of the rectangle."""
+        """
+        Retrieves the height of the rectangle.
+
+        Returns:
+            int: The height of the rectangle.
+        """
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Sets the height."""
+        """
+        Sets the height.
+
+         Args:
+            value (int): The width value.
+
+        Raises:
+            TypeError: If the value is not an integer.
+            ValueError: If the value is less than 0.
+        """
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
@@ -57,17 +80,32 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        """Returns the area of the rectangle."""
+        """
+        Calculates and returns the area of the rectangle.
+
+        Returns:
+            int: The area of the rectangle.
+        """
         return self.__width * self.__height
 
     def perimeter(self):
-        """Return the perimeter of the rectangle."""
+        """
+        Calculates and returns the perimeter of the rectangle.
+
+        Returns:
+            int: The perimeter of the rectangle.
+        """
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (2 * self.__width) + (2 * self.__height)
+        return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Returns a string representation of the rectangle using '#'."""
+        """
+        Returns a string representation of the rectangle using '#'.
+
+        Returns:
+            str: The string representation of the rectangle.
+        """
         if self.__width == 0 or self.__height == 0:
             return ""
         return "\n".join(['#' * self.__width] * self.__height)
