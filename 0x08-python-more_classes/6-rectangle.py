@@ -14,10 +14,6 @@ class Rectangle:
         __init__(self, width=0, height=0):
             Initializes an instance of the class Rectangle.
 
-            Args:
-                width (int, optional): The width of the rectangle.
-                height (int, optional): The height of the rectangle.
-
         __str__(self):
             Returns a string representation of the rectangle using '#'.
 
@@ -33,6 +29,22 @@ class Rectangle:
         __del__(self):
             Prints a message when an instance of class Rectangle is deleted.
 
+        width(self):
+            Retieves the width of the rectangle.
+
+            Returns: The width of the rectangle.
+
+        width(self, value):
+            Sets the width of the rectangle.
+
+        height(self):
+            Retieves the height of the rectangle.
+
+            Returns: The height of the rectangle.
+
+        height(self, value):
+            Sets the height of the rectangle.
+
         area(self):
             Calculates and returns the area of the rectangle.
 
@@ -45,6 +57,7 @@ class Rectangle:
             Returns:
                 int: The perimeter of the rectangle.
     """
+
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
