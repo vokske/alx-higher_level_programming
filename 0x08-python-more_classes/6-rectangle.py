@@ -22,10 +22,10 @@ class Rectangle:
                 width (int, optional): The width of the rectangle.
                 height (int, optional): The height of the rectangle.
 
-       __str__(self):
-           Returns a string representation of the rectangle using '#'.
+        __str__(self):
+            Returns a string representation of the rectangle using '#'.
 
-           Returns:
+            Returns:
                 str: The string representation of the rectangle.
 
         __repr__(self):
@@ -37,17 +37,17 @@ class Rectangle:
         __del__(self):
             Prints a message when an instance of class Rectangle is deleted.
 
-       area(self):
-           Calculates and returns the area of the rectangle.
+        area(self):
+            Calculates and returns the area of the rectangle.
 
-           Returns:
-               int: The area of the rectangle.
+            Returns:
+                int: The area of the rectangle.
 
-       perimeter(self):
-           Calculates and returns the perimeter of the rectangle.
+        perimeter(self):
+            Calculates and returns the perimeter of the rectangle.
 
-           Returns:
-               int: The perimeter of the rectangle.
+            Returns:
+                int: The perimeter of the rectangle.
     """
 
     number_of_instances = 0
@@ -106,7 +106,7 @@ Rectangle.number_of_instances += 1
         """
         Sets the height.
 
-         Args:
+        Args:
             value (int): The width value.
 
         Raises:
