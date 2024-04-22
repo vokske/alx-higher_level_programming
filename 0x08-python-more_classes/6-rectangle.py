@@ -11,9 +11,7 @@ class Rectangle:
     Attributes:
         width (int): Width of the rectangle.
         height (int): Height of the rectangle.
-        number_of_instances (int): Initialized to 0 and increased for every
-                                   instance instantiation and decreamented
-                                   each instance deletion.
+        number_of_instances (int): Total number of instances created.
 
     Methods:
 
