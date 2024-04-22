@@ -11,6 +11,33 @@ class Rectangle:
     Attributes:
         width (int): Width of the rectangle.
         height (int): Height of the rectangle.
+
+    Methods:
+
+        __init__(self, width=0, height=0):
+            Initializes an instance of the class Rectangle.
+
+            Args:
+                width (int, optional): The width of the rectangle.
+                height (int, optional): The height of the rectangle.
+
+       __str__(self):
+           Returns a string representation of the rectangle using '#'.
+
+           Returns:
+                str: The string representation of the rectangle.
+
+       area(self):
+           Calculates and returns the area of the rectangle.
+
+           Returns:
+               int: The area of the rectangle.
+
+       perimeter(self):
+           Calculates and returns the perimeter of the rectangle.
+
+           Returns:
+               int: The perimeter of the rectangle.
     """
 
     def __init__(self, width=0, height=0):
@@ -51,7 +78,7 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-     @property
+    @property
     def height(self):
         """
         Retrieves the height of the rectangle.
