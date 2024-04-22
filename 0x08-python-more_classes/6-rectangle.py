@@ -7,8 +7,6 @@ class Rectangle:
     Represents a rectangle.
 
     Attributes:
-        width (int): Width of the rectangle.
-        height (int): Height of the rectangle.
         number_of_instances (int): Total number of instances created.
 
     Methods:
@@ -47,7 +45,6 @@ class Rectangle:
             Returns:
                 int: The perimeter of the rectangle.
     """
-
     number_of_instances = 0
 
     def __init__(self, width=0, height=0):
