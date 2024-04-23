@@ -1,13 +1,45 @@
 #!/usr/bin/python3
 """
-A module containing class Rectangle.
-"""
+A module containing class Rectangle."""
 
 
 class Rectangle:
-    """Class with area and perimeter calculation methods.
+    """Represents a rectangle.
+
     Attributes:
-        number_of_instances(int): Number of objects created.
+        number_of_instances(int): Total number of objects created.
+
+    Methods:
+
+        __init__(self, width=0, height=0):
+            Initializes an instance of the class Rectangle.
+
+        __str__(self):
+            Returns a string representation of the rectangle using '#'.
+
+            Returns:
+                str: The string representation of the rectangle.
+
+        __repr__(self):
+            Returns a string representation of the rectangle for eval().
+
+            Returns:
+                str: String representation of the rectangle.
+
+        __del__(self):
+            Prints a message when an instance of class Rectangle is deleted.
+
+        area(self):
+            Calculates and returns the area of the rectangle.
+
+            Returns:
+                int: The area of the rectangle.
+
+        perimeter(self):
+            Calculates and returns the perimeter of the rectangle.
+
+            Returns:
+                int: The perimeter of the rectangle.
     """
     number_of_instances = 0
 
