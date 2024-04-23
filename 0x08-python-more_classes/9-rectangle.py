@@ -65,26 +65,6 @@ class Rectangle:
             return rect_1
         return rect_2
 
-    @classmethod
-    def square(cls, size=0):
-        """Creates and returns a new Rectangle instance representing a square.
-
-        Args:
-            size (int): The width and height of the square. Default is 0.
-
-        Returns:
-            Rectangle: A new Rectangle instance representing a square.
-
-        Raises:
-            TypeError: If size is not an integer.
-            ValueError: If size is less than 0.
-        """
-        if not isinstance(size, int):
-            raise TypeError("Size must be an integer")
-        if size < 0:
-            raise ValueError("Size must be >= 0")
-        return cls(size, size)
-
     def __init__(self, width=0, height=0):
         """Initializes width and height.
         Args:
@@ -190,3 +170,23 @@ class Rectangle:
         """
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    @classmethod
+    def square(cls, size=0):
+        """Creates and returns a new Rectangle instance representing a square.
+
+        Args:
+            size (int): The width and height of the square. Default is 0.
+
+        Returns:
+            Rectangle: A new Rectangle instance representing a square.
+
+        Raises:
+            TypeError: If size is not an integer.
+            ValueError: If size is less than 0.
+        """
+        if not isinstance(size, int):
+            raise TypeError("Size must be an integer")
+        if size < 0:
+            raise ValueError("Size must be >= 0")
+        return cls(size, size)
