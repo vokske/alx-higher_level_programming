@@ -181,6 +181,10 @@ class Rectangle:
         Returns:
             Rectangle: A new Rectangle instance representing a square.
         """
-        cls.width.fset(cls, size)
-        cls.height.fset(cls, size)
+        try:
+            cls.width.fset(cls, size)
+            cls.height.fset(cls, size)
+        except (TypeError, ValueError) as e:
+            raise TypeError("size must be an integer") from e
+            raise ValueError("size must be >=0") from e
         return cls(size, size)
