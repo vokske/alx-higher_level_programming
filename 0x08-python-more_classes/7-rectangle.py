@@ -133,10 +133,9 @@ class Rectangle:
             Character '#' representing the area.
         """
         if self.__width == 0 or self.__height == 0:
-            return ("")
-        rectangle_str = [Rectangle.print_symbol * self.__width
-                         for i in range(self.__height)]
-        return ("\n".join(rectangle_str))
+            return ""
+        return ("\n".join([str(Rectangle.print_symbol) * self.__width]
+                * self__height))
 
     def __repr__(self):
         """String repr of rectangle class.
