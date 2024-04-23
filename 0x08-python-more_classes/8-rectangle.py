@@ -51,15 +51,15 @@ class Rectangle:
 
         Args:
             rect_1 (Rectangle): First rectangle.
-            rect_2 (Rectangle): second rectangle.
+            rect_2 (Rectangle): Second rectangle.
         """
         if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
-            raise TypeError("rect_1 must be an instance of Rectangle")
+            raise TypeError("rect_2 must be an instance of Rectangle")
 
-        area_1 = Rectangle.rect_1
-        area_2 = Rectangle.rect_2
+        area_1 = rect_1.area()
+        area_2 = rect_2.area()
 
         if area_1 >= area_2:
             return rect_1
