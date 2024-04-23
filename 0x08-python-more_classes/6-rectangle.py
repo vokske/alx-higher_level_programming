@@ -17,18 +17,9 @@ class Rectangle:
             width (int, optional): Width of rectangle.
             height (int, optional): Height of rectangle.
         """
-        if not isinstance(width, int):
-            raise TypeError("width must be an integer")
-        elif not isinstance(height, int):
-            raise TypeError("height must be an integer")
-        elif width < 0:
-            raise ValueError("width must be >= 0")
-        elif height < 0:
-            raise ValueError("height must be >= 0")
-        else:
-            self.__width = width
-            self.__height = height
-            type(self).number_of_instances += 1
+        self.__width = width
+        self.__height = height
+    Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -108,5 +99,5 @@ class Rectangle:
     def __del__(self):
         """Deletes a class instance and prints a message.
         """
-        type(self).number_of_instances -= 1
         print("Bye rectangle...")
+    Rectangle.number_of_instances -= 1
