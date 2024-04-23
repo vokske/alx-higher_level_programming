@@ -181,4 +181,6 @@ class Rectangle:
         Returns:
             Rectangle: A new Rectangle instance representing a square.
         """
+        cls.width.fset(cls, size)
+        cls.height.fset(cls, size)
         return cls(size, size)
