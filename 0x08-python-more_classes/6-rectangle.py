@@ -81,7 +81,7 @@ class Rectangle:
 
         Raises:
             TypeError: if height is not an integer.
-            ValueError: if height is less than 0. 
+            ValueError: if height is less than 0.
         Returns:
             Height of the rectangle.
         """
