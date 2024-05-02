@@ -27,10 +27,3 @@ def matrix_divided(matrix, div):
         raise ZeroDivisionError("division by zero")
     result_matrix = [[round(element / div, 2) for element in row] for row in matrix]
     return result_matrix
-
-
-matrix = [[1, 2, 3],
-          [4, 5, 6],
-          [7, 8, 9]
-        ]
-print(matrix_divided(matrix, 4))
