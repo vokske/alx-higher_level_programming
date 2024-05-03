@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """Contains a function that says one's name."""
+
+
 def say_my_name(first_name, last_name=""):
     """
     Prints one's name.
