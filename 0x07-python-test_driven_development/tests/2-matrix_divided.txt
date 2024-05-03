@@ -76,3 +76,10 @@ Proceed to test the function.
 	Traceback (most recent call last):
 	...
 	TypeError: ...
+
+	>>> matrix = [[5, "7", 9], [4, 6, 8]]
+
+	>>> matrix_divided(matrix, 4)
+	>>> Traceback (most recent call last):
+	...
+	TypeError: matrix must be a matrix (list of lists) of integers/floats
