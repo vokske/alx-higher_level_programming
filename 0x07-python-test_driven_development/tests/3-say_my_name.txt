@@ -1,0 +1,33 @@
+Text file contains test cases for the 3-say_my_name module.
+
+We import the function from the module.
+
+	>>> say_my_name = __import__("3-say_my_name").say_my_name
+
+	>>> say_my_name("Bill", "Joe")
+	My name is Bill Joe
+
+	>>> say_my_name("Bill", "")
+	My name is Bill
+
+	>>> say_my_name("Bill")
+	My name is Bill
+
+	>>> say_my_name()
+	Traceback (most recent call last):
+	TypeError: say_my_name() missing 1 required positional argument: ...
+
+	>>> say_my_name("Bill", 10)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name(10, "Joe")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name(10, (Joe))
+	Traceback (most recent call last):
+	NameError: name 'Joe' is not defined
+
+	>>> say_my_name("", "Joe")
+	My name is  Joe
