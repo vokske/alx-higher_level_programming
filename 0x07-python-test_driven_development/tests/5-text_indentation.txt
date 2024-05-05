@@ -1,0 +1,41 @@
+Text file contains tests for the text_indentation function.
+
+Import the function and go ahead to test it.
+
+	>>> text_indentation = __import__("5-text_indentation").text_indentation
+
+	>>> text_indentation("What's up? Your items are: sneakers,
+			     bags, and jackets.")
+	What's up?
+
+
+	Your items are:
+
+
+	sneakers, bags, and jackets.
+
+
+	>>> text_indentation("My name is Jim")
+	My name is Jim
+
+	>>> text_indentation("  My favorite game is baseball     ")
+	My favorite game is baseball
+
+	>>> text_indentation("123")
+	123
+
+	>>> text_indentation(Here's your change)
+	File ...
+	SyntaxError: invalid syntax
+
+	>>> text_indentation([2, 4, 5])
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation()
+	Traceback (most recent call last):
+	TypeError: text_indentation() missing 1 required positional argument:
+
+	>>> text_indentation(None)
+	Traceback (most recent call last):
+	TypeError: text must be a string
