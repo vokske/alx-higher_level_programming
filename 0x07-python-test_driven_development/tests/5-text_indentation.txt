@@ -2,15 +2,13 @@ Text file contains tests for the text_indentation function.
 
 Import the function and go ahead to test it.
 
-	>>> text_indentation = __import__("5-text_indentation").text_indentation
-
-	>>> text_indentation("What's up? Your items are: sneakers,
-			     bags, and jackets.")
+	>>> from ..5-text_indentation import text_indentation
+	>>> text_indentation("What's up? Your items are: bags, tea, and salt.")
 	What's up?
 	<BLANKLINE>
 	Your items are:
 	<BLANKLINE>
-	sneakers, bags, and jackets.
+	bags, tea, and salt.
 	<BLANKLINE>
 
 	>>> text_indentation("My name is Jim")
