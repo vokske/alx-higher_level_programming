@@ -9,12 +9,3 @@ class LockedClass:
     Only allows creation if attribute is called first_name.
     """
     __slots__ = ("first_name")
-
-    def __init__(self, first_name):
-        """
-        init method.
-
-        Args:
-            first_name: First name
-        """
-        self.first_name = first_name
