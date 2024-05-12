@@ -1,0 +1,13 @@
+Tests for class MyList.
+
+We import the class and begin testing.
+
+	>>> MyList = __import__("1-my_list").MyList
+
+	>>> a = MyList()
+	>>> print(isinstance(a, MyList))
+	>>> print(isinstance(a, list))
+	>>> print(issubclass(MyList, list))
+	>>> print(type(a) is MyList)
+	>>> print(tye(a) is list)
+	>>> print(type(MyList) is list)
