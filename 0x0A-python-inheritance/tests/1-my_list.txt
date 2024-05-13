@@ -15,7 +15,8 @@ Import the class and begin testing.
 	True
 	>>> print(type(a) is MyList)
 	True
-	>>> print(tye(a) is list)
+	>>> print(type(a) is list)
+
 	False
 	>>> print(type(MyList) is list)
 	False
