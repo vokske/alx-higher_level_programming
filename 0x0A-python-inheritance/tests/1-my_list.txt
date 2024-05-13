@@ -2,7 +2,7 @@ Tests for class MyList.
 
 We import the class and begin testing.
 
-	>>> MyList = __import__("1-my_list").MyList
+	>>> MyList = __import__('1-my_list').MyList
 
 	>>> a = MyList()
 	>>> print(isinstance(a, MyList))
@@ -32,3 +32,57 @@ We import the class and begin testing.
 	[4, -6, 8]
 	>>> b.print_sorted()
 	[-6, 4, 8]
+
+	>>> print(a)
+	[]
+	
+	>>> l = MyList([7, -10])
+	>>> print(l)
+	[7, -10]
+
+	>>> l.print_sorted()
+	[-10, 7]
+
+	>>> l = MyList([3, 3])
+	>>> l.print_sorted()
+	[3, 3]
+
+	>>> l = MyList([15, 4, 10])
+	>>> l.print_sorted()
+	[4, 10, 15]
+
+
+	>>> l = MyList([4, 15, 10])
+	>>> l.print_sorted()
+	[4, 10, 15]
+
+	>>> l = MyList([10, 4, 15])
+	>>> l.print_sorted()
+	[4, 10, 15]
+
+	>>> l = MyList([-16, -6, -8])
+	>>> l.print_sorted()
+	[-16, -8, -6]
+
+	>>> l = MyList([45, 1008, 501])
+	>>> l.print_sorted()
+	[45, 501, 1008]
+
+	>>> list1.print_sorted()
+	Traceback (most recent call last):
+	NameError: name 'list1' is not defined
+
+	>>> l = MyList()
+	>>> l
+	[]
+	>>> l.append(5)
+	>>> l
+	[5]
+	>>> l.print_sorted()
+	[5]
+
+	>>> l.remove(5)
+	>>> l
+	[]
+	>>> l.print_sorted()
+	[]
