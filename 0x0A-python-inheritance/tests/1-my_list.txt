@@ -33,7 +33,7 @@ Import the class and begin testing.
 	>>> b = [4, -6, 8]
 	>>> b.print_sorted()
 	Traceback (most recent call last):
-	AttributeError: 'b' object has no attribute 'print_sorted'
+	AttributeError: 'list' object has no attribute 'print_sorted'
 
 	>>> b = MyList(b)
 	>>> print(b)
