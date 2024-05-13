@@ -11,3 +11,24 @@ We import the class and begin testing.
 	>>> print(type(a) is MyList)
 	>>> print(tye(a) is list)
 	>>> print(type(MyList) is list)
+
+	>>> empty_list = MyList()
+	>>> empty_list.append(3)
+	>>> empty_list.append(-9)
+	>>> empty_list.append(0)
+	>>> empty_list.append(12)
+	>>> print(empty_list)
+	[3, -9, 0, 12]
+	>>> empty_list.print_sorted()
+	[-9, 0, 3, 12]
+	
+	>>> b = [4, -6, 8]
+	>>> b.print_sorted()
+	Traceback (most recent call last):
+	AttributeError: 'b' object has no attribute 'print_sorted'
+
+	>>> b = MyList(b)
+	>>> print(b)
+	[4, -6, 8]
+	>>> b.print_sorted()
+	[-6, 4, 8]
