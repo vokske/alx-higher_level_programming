@@ -1,0 +1,17 @@
+#!/usr/bin/python3
+"""Module contains function is_same_class."""
+
+
+def is_kind_of_class(obj, a_class):
+    """
+    Checks if an object is an instance of, or an instance of a class inherited
+    from, a specified class.
+
+    Args:
+        obj: Object of a class.
+        a_class: Specified class.
+
+    Returns:
+        True: if object is exactly an instance of the class. False otherwise.
+    """
+    return isinstance(obj) is a_class
