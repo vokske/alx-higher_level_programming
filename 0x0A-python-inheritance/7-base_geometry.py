@@ -10,6 +10,7 @@ class BaseGeometry:
         area
         integer_validator
     """
+
     def area(self):
         """
         Area method.
