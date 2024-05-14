@@ -7,7 +7,7 @@ We first import the module and begin testing.
 	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 	>>> a = BaseGeometry()
 	>>> print(a)
-	<__main__.BaseGeometry object at 0x00000270DD814290>
+	<BLANKLINE>
 
 	>>> print(a.area())
 	Traceback (most recent call last):
