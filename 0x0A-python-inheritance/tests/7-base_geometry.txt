@@ -7,7 +7,6 @@ We first import the module and begin testing.
 	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 	>>> a = BaseGeometry()
 	>>> print(a)
-	<BLANKLINE>
 
 	>>> print(a.area())
 	Traceback (most recent call last):
@@ -22,7 +21,7 @@ We first import the module and begin testing.
 	TypeError: BaseGeometry.integer_validator() missing 1 required ...
 
 	>>> print(a.integer_validator("length", 5))
-	None
+
 
 	>>> print(a.integer_validator("best", -3))
 	Traceback (most recent call last):
