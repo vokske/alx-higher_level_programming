@@ -5,7 +5,7 @@ We first import the module and begin testing.
 ----------------------------------------------
 
 	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
-	
+
 	>>> a = BaseGeometry()
 
         >>> a.area()
@@ -58,4 +58,8 @@ We first import the module and begin testing.
 	
 	>>> a.integer_validator("Big", 54e10)
 	Traceback (most recent call last):
-	TypeError: Big must be an integer
+	TypeError: Big must be an integeri
+
+	>>> a.integer_validator("Perimeter", "Okay")
+	Traceback (most recent call last):
+	TypeError: Perimeter must be an integer
