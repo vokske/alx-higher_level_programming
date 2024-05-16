@@ -1,65 +1,68 @@
-We write various tests for the BaseGeometry class.
-----------------------------------------------------
+Tests for the '7-base_geometry' module
+----------------------------------------
 
-We first import the module and begin testing.
-----------------------------------------------
+Import the class:
 
-	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
-	>>> a = BaseGeometry()
+Now test it:
 
-        >>> a.area()
-        Traceback (most recent call last):
-        Exception: area() is not implemented
+    >>> a = BaseGeometry()
+    
+    >>> a.integer_validator("num", 7)
 
-        >>> a.integer_validator("age")
-        Traceback (most recent call last):
-        TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
+    >>> a.integer_validator("length", 10)
 
-        >>> a.integer_validator("length", 5)
+    >>> a.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
 
-        >>> a.integer_validator("best", -3)
-        Traceback (most recent call last):
-        ValueError: best must be greater than 0
+    >>> a.integer_validator("name", "Area")
+    Traceback (most recent call last):
+    TypeError: name must be an integer
 
-	>>> a.integer_validator()
-        Traceback (most recent call last):
-        TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    >>> a.integer_validator("set", 0)
+    Traceback (most recent call last):
+    ValueError: set must be greater than 0
+    
+    >>> a.integer_validator("distance", -13)
+    Traceback (most recent call last):
+    ValueError: distance must be greater than 0
 
-        >>> a.integer_validator("set", 0)
-        Traceback (most recent call last)
-        ValueError: set must be greater than 0
+    >>> a.integer_validator("sum", 4.9)
+    Traceback (most recent call last):
+    TypeError: sum must be an integer
 
-        >>> a.integer_validator("length", 20.9)
-        Traceback (most recent call last):
-        TypeError: length must be an integer
+    >>> a.integer_validator("perimeter")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
 
-	>>> a.integer_validator("diagonal", (4,))
-	Traceback (most recent call last):
-	TypeError: diagonal must be an integer
+    >>> a.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
-	>>> a.integer_validator("average", [4, 5])
-	Traceback (most recent call last):
-	TypeError: average must be an integer
+    >>> a.integer_validator("NaN", float('nan'))
+    Traceback (most recent call last):
+    TypeError: NaN must be an integer
 
-	>>> a.integer_validator("box", None)
-	Traceback (most recent call last):
-	TypeError: box must be an integer
+    >>> a.integer_validator("Large", 340000000000000000000000000000000000000000000)
 
-	>>> a.integer_validator("NaN", float('NaN'))
-	Traceback (most recent call last):
-	TypeError: NaN must be an integer
+    >>> a.integer_validator("sides", (14,))
+    Traceback (most recent call last):
+    TypeError: sides must be an integer
 
-	>>> a.integer_validator("side", False)
-	Traceback (most recent call last):
-	TypeError: side must be an integer
+    >>> a.integer_validator("sum", [5])
+    Traceback (most recent call last):
+    TypeError: sum must be an integer
 
-	>>> a.integer_validator("Large", 54000000000000000000000000000000000)
-	
-	>>> a.integer_validator("Big", 54e10)
-	Traceback (most recent call last):
-	TypeError: Big must be an integeri
+    >>> a.integer_validator("sides", False)
+    Traceback (most recent call last):
+    TypeError: sides must be an integer
 
-	>>> a.integer_validator("Perimeter", "Okay")
-	Traceback (most recent call last):
-	TypeError: Perimeter must be an integer
+    >>> a.integer_validator("area", {11, 14})
+    Traceback (most recent call last):
+    TypeError: area must be an integer
+
+    >>> a.integer_validator("sum", None)
+    Traceback (most recent call last):
+    TypeError: sum must be an integer
