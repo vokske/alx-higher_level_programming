@@ -37,4 +37,4 @@ class Square(Rectangle):
 
         Returns: Custom square description.
         """
-        return f"[Square] {self.__width}/{self.__height}"
+        return super().__str__()
