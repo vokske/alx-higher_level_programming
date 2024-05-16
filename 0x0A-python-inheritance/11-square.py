@@ -21,9 +21,9 @@ class Square(Rectangle):
         Args:
             size(int): Size of square side.
         """
-        self.integer_validator("size", size)
         super().__init__(size, size)
         self.__size = size
+        self.integer_validator("size", size)
 
     def area(self):
         """
@@ -37,4 +37,4 @@ class Square(Rectangle):
 
         Returns: Custom square description.
         """
-        return f"[{__class__.__name__}] {self.__size}/{self.__size}"
+        return f"[Square] {self.__size}/{self.__size}"
