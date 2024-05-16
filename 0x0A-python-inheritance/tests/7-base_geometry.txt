@@ -14,14 +14,12 @@ We first import the module and begin testing.
 
         >>> a.integer_validator("age")
         Traceback (most recent call last):
-	...
         TypeError: BaseGeometry.integer_validator() missing 1 required positional argument: 'value'
 
         >>> a.integer_validator("length", 5)
 
         >>> a.integer_validator("best", -3)
         Traceback (most recent call last):
-	...
         ValueError: best must be greater than 0
 
 	>>> a.integer_validator()
@@ -29,11 +27,35 @@ We first import the module and begin testing.
         TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
         >>> a.integer_validator("set", 0)
-        Traceback (most recent call last):
-	...
+        Traceback (most recent call last)
         ValueError: set must be greater than 0
 
         >>> a.integer_validator("length", 20.9)
         Traceback (most recent call last):
-	...
         TypeError: length must be an integer
+
+	>>> a.integer_validator("diagonal", (4,))
+	Traceback (most recent call last):
+	TypeError: diagonal must be an integer
+
+	>>> a.integer_validator("average", [4, 5])
+	Traceback (most recent call last):
+	TypeError: average must be an integer
+
+	>>> a.integer_validator("box", None)
+	Traceback (most recent call last):
+	TypeError: box must be an integer
+
+	>>> a.integer_validator("NaN", float('NaN'))
+	Traceback (most recent call last):
+	TypeError: NaN must be an integer
+
+	>>> a.integer_validator("side", False)
+	Traceback (most recent call last):
+	TypeError: side must be an integer
+
+	>>> a.integer_validator("Large", 54000000000000000000000000000000000)
+	
+	>>> a.integer_validator("Big", 54e10)
+	Traceback (most recent call last):
+	TypeError: Big must be an integer
