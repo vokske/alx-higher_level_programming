@@ -15,7 +15,7 @@ We first import the module and begin testing.
         >>> a.integer_validator()
         Traceback (most recent call last):
         ...
-        TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+        TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
 
         >>> a.integer_validator("age")
         Traceback (most recent call last):
