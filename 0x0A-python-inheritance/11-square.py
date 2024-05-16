@@ -2,7 +2,7 @@
 """Module contains the Square class."""
 
 
-Rectangle = __import__('10-rectangle').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
@@ -36,4 +36,4 @@ class Square(Rectangle):
 
         Returns: Custom square description.
         """
-        return f"[{__class__.__name__}] {self.__width}/{self.__height}"
+        return f"[Square] {self.__width}/{self.__height}"
