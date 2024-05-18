@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module contains a script.
+It adds all arguments to a Python list, and then savse them to a file.
+"""
 
 import json
 import sys
