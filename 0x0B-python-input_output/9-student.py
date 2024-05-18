@@ -30,4 +30,4 @@ class Student(object):
 
     def to_json(self):
         """Retrieves a dictionary representation of a Student instance."""
-        return self.__dict__
+        return vars(self)
