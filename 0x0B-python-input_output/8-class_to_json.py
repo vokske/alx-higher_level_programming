@@ -9,4 +9,4 @@ def class_to_json(obj):
     Args:
         obj: Specified Python object.
     """
-    return obj.__dict__
+    return vars(obj)
