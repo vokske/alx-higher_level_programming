@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""Module contains a script.
-It adds all arguments to a Python list, and then savse them to a file.
+"""
+Module contains a script.
+It adds all arguments to a Python list, and then saves them to a file.
 """
 
 import json
@@ -18,4 +19,4 @@ if len(sys.argv) > 1:
     for argument in sys.argv[1:]:
         my_list.append(argument)
 
-save_to_json_file(my_file, "add_item.json")
+save_to_json_file(my_list, "add_item.json")
