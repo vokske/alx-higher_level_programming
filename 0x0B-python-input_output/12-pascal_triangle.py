@@ -5,7 +5,7 @@
 def pascal_triangle(n):
     """
     Computes the Pascal's triangle of order n.
-    
+
     Args:
         n: Order of the Pascal's triangle.
 
