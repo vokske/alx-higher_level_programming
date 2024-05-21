@@ -18,6 +18,21 @@ class Rectangle(Base):
     """
 
     def __init__(self, width, height, x=0, y=0, id=None):
+        """
+        Class constructor to initialize all instance attributes.
+
+        Args:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+            x (int): The x-coordinate in relation to the rectangle.
+            y (int): The y-coordinate in relation to the rectangle.
+            id (int): Id of the instance. Initialized to 'None'.
+
+        Raises:
+            TypeError: If width, height, x, or y is not an integer.
+            ValueError: If width or height is <= 0. Also, if x or y < 0.
+        """
+
         self.__width = width
         self.__height = height
         self.__x = x
@@ -26,48 +41,56 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """Retrieves width."""
         return self.__width
 
     @property
     def height(self):
+        """Retrieves height."""
         return self.__height
 
     @property
     def x(self):
+        """Retrieves the x-coordinate."""
         return self.__x
 
     @property
     def y(self):
+        """Retrieves the y-coordinate."""
         return self.__y
 
     @width.setter
     def width(self, value):
+        """Validates the value of width."""
         if type(value) is not int:
             raise TypeError(f"{self.__width} must be an integer")
         if value <= 0:
-            raise ValueError(f"{self.__width} must be >= 0")
+            raise ValueError(f"{self.__width} must be > 0")
         self.__width = value
 
     @height.setter
     def height(self, value):
+        """Validates the value of height."""
         if type(value) is not int:
             raise TypeError(f"{self.__height} must be an integer")
         if value <= 0:
-            raise ValueError(f"{self.__height} must be >= 0")
+            raise ValueError(f"{self.__height} must be > 0")
         self.__height = value
 
     @x.setter
     def x(self, value):
+        """Validates the value of x."""
         if type(value) is not int:
             raise TypeError(f"{self.__x} must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError(f"{self.__x} must be >= 0")
         self.__x = value
 
     @y.setter
     def y(self, value):
+        """Validates the value of y."""
         if type(value) is not int:
             raise TypeError(f"{self.__y} must be an integer")
-        if value <= 0:
+        if value < 0:
             raise ValueError(f"{self.__y} must be >= 0")
         self.__y = value
