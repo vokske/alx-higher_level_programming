@@ -2,7 +2,7 @@
 """Module contains the class Base."""
 
 
-class Base(object):
+class Base:
     """
     Manages the id attribute.
 
@@ -21,5 +21,6 @@ class Base(object):
 
         if id is not None:
             self.id = id
-        __nb_objects += 1
-        self.id = Base.__nb_objects
+        else:
+            Base.__nb_objects += 1
+            self.id = Base.__nb_objects
