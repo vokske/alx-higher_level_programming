@@ -35,10 +35,10 @@ class Rectangle(Base):
             ValueError: If width or height is <= 0. Also, if x or y < 0.
         """
 
-        self.__width = width
-        self.__height = height
-        self.__x = x
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
