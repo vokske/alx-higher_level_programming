@@ -35,10 +35,10 @@ class Rectangle(Base):
             ValueError: If width or height is <= 0. Also, if x or y < 0.
         """
 
-        self.width = width
-        self.height = height
-        self.x = x
-        self.y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
         super().__init__(id)
 
     @property
@@ -65,9 +65,9 @@ class Rectangle(Base):
     def width(self, value):
         """Validates the value of width."""
         if type(value) is not int:
-            raise TypeError(f"{self.__width} must be an integer")
+            raise TypeError(f"{self.width.__name__} must be an integer")
         if value <= 0:
-            raise ValueError(f"{self.__width} must be > 0")
+            raise ValueError(f"{self.width.__name__} must be > 0")
         self.__width = value
 
     @height.setter
@@ -76,23 +76,23 @@ class Rectangle(Base):
         if type(value) is not int:
             raise TypeError(f"{self.__height} must be an integer")
         if value <= 0:
-            raise ValueError(f"{self.__height} must be > 0")
+            raise ValueError(f"{self.height.__name__} must be > 0")
         self.__height = value
 
     @x.setter
     def x(self, value):
         """Validates the value of x."""
         if type(value) is not int:
-            raise TypeError(f"{self.__x} must be an integer")
+            raise TypeError(f"{self.x.__name__} must be an integer")
         if value < 0:
-            raise ValueError(f"{self.__x} must be >= 0")
+            raise ValueError(f"{self.x.__name__} must be >= 0")
         self.__x = value
 
     @y.setter
     def y(self, value):
         """Validates the value of y."""
         if type(value) is not int:
-            raise TypeError(f"{self.__y} must be an integer")
+            raise TypeError(f"{self.y.__name__} must be an integer")
         if value < 0:
-            raise ValueError(f"{self.__y} must be >= 0")
+            raise ValueError(f"{self.y.__name__} must be >= 0")
         self.__y = value
