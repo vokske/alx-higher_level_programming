@@ -65,34 +65,34 @@ class Rectangle(Base):
     def width(self, value):
         """Validates the value of width."""
         if type(value) is not int:
-            raise TypeError(f"{self.width.__name__} must be an integer")
+            raise TypeError("width must be an integer")
         if value <= 0:
-            raise ValueError(f"{self.width.__name__} must be > 0")
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @height.setter
     def height(self, value):
         """Validates the value of height."""
         if type(value) is not int:
-            raise TypeError(f"{self.__height} must be an integer")
+            raise TypeError("height must be an integer")
         if value <= 0:
-            raise ValueError(f"{self.height.__name__} must be > 0")
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @x.setter
     def x(self, value):
         """Validates the value of x."""
         if type(value) is not int:
-            raise TypeError(f"{self.x.__name__} must be an integer")
+            raise TypeError(f"x must be an integer")
         if value < 0:
-            raise ValueError(f"{self.x.__name__} must be >= 0")
+            raise ValueError(f"x must be >= 0")
         self.__x = value
 
     @y.setter
     def y(self, value):
         """Validates the value of y."""
         if type(value) is not int:
-            raise TypeError(f"{self.y.__name__} must be an integer")
+            raise TypeError("y must be an integer")
         if value < 0:
-            raise ValueError(f"{self.y.__name__} must be >= 0")
+            raise ValueError("y must be >= 0")
         self.__y = value
