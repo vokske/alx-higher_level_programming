@@ -74,11 +74,6 @@ class Rectangle(Base):
         """Retrieves the x-coordinate."""
         return self.__x
 
-    @property
-    def y(self):
-        """Retrieves the y-coordinate."""
-        return self.__y
-
     @x.setter
     def x(self, value):
         """Validates the value of x."""
@@ -88,6 +83,11 @@ class Rectangle(Base):
             raise ValueError(f"x must be >= 0")
         self.__x = value
 
+    @property
+    def y(self):
+        """Retrieves the y-coordinate."""
+        return self.__y
+
     @y.setter
     def y(self, value):
         """Validates the value of y."""
@@ -96,3 +96,7 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("y must be >= 0")
         self.__y = value
+
+    def area(self):
+        """Returns the area of the Rectangle instance."""
+        return self.__width * self.__height
