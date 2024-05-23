@@ -112,5 +112,5 @@ class Rectangle(Base):
 
     def __str__(self):
         """Return a custom representation of the Rectangle."""
-        return (f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}
-                /{self.height}")
+        return f"[Rectangle] ({self.id}) {self.x}/{self.y} - {self.width}
+                /{self.height}"
