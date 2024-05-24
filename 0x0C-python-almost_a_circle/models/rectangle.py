@@ -133,4 +133,5 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
+        """Return a json representation of a Rectangle instance."""
         return json.dumps(Rectangle())
