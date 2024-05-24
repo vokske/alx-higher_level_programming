@@ -44,6 +44,13 @@ class Base:
         with open(filename, "w") as f:
             f.write(json_string)
 
+    @staticmethod
+    def from_json_string(json_string):
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return list(json.loads(json_string))
+
     def __init__(self, id=None):
         """
         Initialization of the Base class.
