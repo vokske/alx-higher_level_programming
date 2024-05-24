@@ -60,6 +60,15 @@ class Base:
         else:
             return list(json.loads(json_string))
 
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
     def __init__(self, id=None):
         """
         Initialization of the Base class.
