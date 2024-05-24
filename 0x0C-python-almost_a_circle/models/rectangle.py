@@ -2,6 +2,7 @@
 """Contains a class Rectangle that inherits from Base."""
 
 
+import json
 from models.base import Base
 
 
@@ -130,3 +131,6 @@ class Rectangle(Base):
             for key, value in kwargs.items():
                 if hasattr(self, key):
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        return json.dumps(Rectangle())
