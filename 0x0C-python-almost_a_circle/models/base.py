@@ -77,7 +77,7 @@ class Base:
 
         try:
             with open(filename, 'r') as fn:
-                json_string = fn.read(filename)
+                json_string = fn.read()
             list_dicts = cls.from_json_string(json_string)
             instances = []
             for item in list_dicts:
