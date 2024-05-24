@@ -32,6 +32,8 @@ class Square(Rectangle):
         return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     def update(self, *args, **kwargs):
+        """Update a Square instance with args or kwargs."""
+
         attrs = ["id", "size", "x", "y"]
 
         if args and len(args) != 0:
