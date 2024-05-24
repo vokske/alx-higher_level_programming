@@ -126,8 +126,8 @@ class Base:
                         instance = cls.create(id=id, size=size, x=x, y=y)
                     instance.append(instance)
                 return instances
-            except FileNotFoundError:
-                return []
+        except FileNotFoundError:
+            return []
 
     def __init__(self, id=None):
         """
