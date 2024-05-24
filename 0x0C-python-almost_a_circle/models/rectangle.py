@@ -119,7 +119,7 @@ class Rectangle(Base):
         Assign a key/value argument to attributes.
 
         Args:
-            *args: Valriable length argument list in order.
+            *args: Variable length argument list in order.
         """
 
         if args and len(args) != 0:
@@ -133,5 +133,11 @@ class Rectangle(Base):
                     setattr(self, key, value)
 
     def to_dictionary(self):
-        """Return a json representation of a Rectangle instance."""
-        return json.dumps(Rectangle())
+        """Return a dictionary representation of a Rectangle instance."""
+        return {
+                "id": self.id,
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
+                "y": self.y
+                }
