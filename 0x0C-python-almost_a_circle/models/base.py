@@ -98,7 +98,7 @@ class Base:
         """
 
         filename = f"{cls.__name__}.csv"
-        with open(filename, 'r', newline='') as f:
+        with open(filename, 'w', newline='') as f:
             writer = csv.writer(f)
             if cls.__name__ == "Rectangle":
                 for obj in list_objs:
