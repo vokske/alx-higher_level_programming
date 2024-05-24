@@ -124,7 +124,7 @@ class Base:
                     elif cls.__name__ == "Square":
                         id, size, x, y = map(int, row)
                         instance = cls.create(id=id, size=size, x=x, y=y)
-                    instance.append(instance)
+                    instances.append(instance)
                 return instances
         except FileNotFoundError:
             return []
