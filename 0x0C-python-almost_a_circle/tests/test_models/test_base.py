@@ -121,8 +121,8 @@ class TestBase(unittest.TestCase):
 
         Square.save_to_file(None)
         with open("Square.json", "r") as f:
-            content = f.read()
-        self.assertEqual(content, "[]")
+            stuff = f.read()
+        self.assertEqual(stuff, "[]")
 
     def test_from_json_string(self):
         """Checks conversion from JSON string to list of instances."""
