@@ -49,6 +49,12 @@ class TestSquare(unittest.TestCase):
             Square(12, 0, 0.5)
         with self.assertRaisesRegex(ValueError, "x must be >= 0"):
             Square(20, -3, -1, 10)
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Square(20, "4")
+        with self.assertRaisesRegex(ValueError, "y must be >= 0"):
+            Square(20, 3, -1)
+        with self.assertRaisesRegex(ValueError, "width must be > 0"):
+            Square(0)
 
     def test_square_str(self):
         """Check that __str__ method displays Square object correctly."""

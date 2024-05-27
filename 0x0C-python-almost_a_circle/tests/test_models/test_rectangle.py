@@ -104,7 +104,10 @@ class TestRectangle(unittest.TestCase):
             Rectangle(18, 4.5)
 
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
-            Rectangle(None, "5")
+            Rectangle("2", 5)
+
+        with self.assertRaisesRegex(TypeError, "x must be an integer"):
+            Rectangle(3, 7, "5")
 
     def test_value_error(self):
         """Tests proper raising of a ValueError."""
@@ -112,6 +115,14 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaises(ValueError) as ve:
             Rectangle(-3, 4)
         self.assertEqual(str(ve.exception), "width must be > 0")
+
+        with self.assertRaises(ValueError) as ve:
+            Rectangle(0, 4)
+        self.assertEqual(str(ve.exception), "width must be > 0")
+
+        with self.assertRaises(ValueError) as ve:
+            Rectangle(4, 0)
+        self.assertEqual(str(ve.exception), "height must be > 0")
 
         with self.assertRaises(ValueError) as ve:
             Rectangle(4, -2)

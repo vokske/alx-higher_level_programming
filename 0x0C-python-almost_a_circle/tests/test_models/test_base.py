@@ -119,6 +119,11 @@ class TestBase(unittest.TestCase):
             content = f.read()
         self.assertEqual(content, "[]")
 
+        Square.save_to_file(None)
+        with open("Square.json", "r") as f:
+            content = f.read()
+        self.assertEqual(content, "[]")
+
     def test_from_json_string(self):
         """Checks conversion from JSON string to list of instances."""
 
@@ -147,6 +152,18 @@ class TestBase(unittest.TestCase):
         Rectangle.save_to_file(None)
         rect1 = Rectangle.load_from_file()
         self.assertEqual(rect1, [])
+
+        Square.save_to_file(None)
+        sq1 = Square.load_from_file()
+        self.assertEqual(sq1, [])
+
+        s = Square(20, 4, 5, 2)
+        s1 = Square(10, 5, 5, 3)
+        Square.save_to_file([s, s1])
+        sq = Square.load_from_file()
+        self.assertEqual(len(sq), 2)
+        self.assertEqual(sq[0].id, 2)
+        self.assertEqual(sq[1].id, 3)
 
     def test_save_to_file_csv(self):
         """Test serialization in CSV."""
