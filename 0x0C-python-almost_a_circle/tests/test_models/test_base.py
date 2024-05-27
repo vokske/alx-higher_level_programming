@@ -119,6 +119,9 @@ class TestBase(unittest.TestCase):
             content = f.read()
         self.assertEqual(content, "[]")
 
+    def test_save_to_file_with_none(self):
+        """Test save_to_file method with no Square instance."""
+
         Square.save_to_file(None)
         with open("Square.json", "r") as f:
             stuff = f.read()
