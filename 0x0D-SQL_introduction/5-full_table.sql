@@ -1,3 +1,3 @@
 -- Prints the full description of a table from a database in my MYSQL server
-SHOW CREATE TABLE hbtn_0c_0.first_table;
+SHOW TABLE STATUS FROM hbtn_0c_0 LIKE 'first_table';
 
