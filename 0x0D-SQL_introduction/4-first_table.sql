@@ -1,5 +1,3 @@
 -- Creates a table in the current database in my MYSQL server
-CREATE TABLE IF NOT EXISTS (
-	id INT,
-	name VARCHAR(256);
+CREATE TABLE IF NOT EXISTS first_name (id INT, name VARCHAR(256));
 
